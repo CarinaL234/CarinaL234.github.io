@@ -3,70 +3,216 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carina Li Blog</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 860px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.7;
-      color: #222;
-    }
-    h1, h2 {
-      margin-bottom: 10px;
-    }
-    .section {
-      margin-top: 36px;
-    }
-    .card {
-      padding: 16px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      margin-top: 12px;
-    }
-    a {
-      color: #0366d6;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <title>Carina Li | Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Carina Li</h1>
-  <p>Welcome to my personal blog and portfolio site.</p>
-
-  <div class="section">
-    <h2>About Me</h2>
-    <div class="card">
-      <p>I am Carina. This is my personal website built with GitHub Pages.</p>
-      <p>I will share my projects, study notes, and blog posts here.</p>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">Carina Li</div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#games">Games</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <div class="section">
-    <h2>Blog</h2>
-    <div class="card">
-      <p><strong>My first post</strong></p>
-      <p>This section will contain my future blog articles.</p>
-    </div>
-  </div>
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Personal Website</p>
+          <h1>A personal website with a built in game menu</h1>
+          <p class="hero-desc">
+            Welcome to my website. This page combines my personal profile,
+            projects, and a game section where visitors can click and play directly.
+          </p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#games">Open Games</a>
+            <a class="btn btn-secondary" href="#projects">View Projects</a>
+          </div>
+        </div>
 
-  <div class="section">
-    <h2>Projects</h2>
-    <div class="card">
-      <p>Project information will be added here.</p>
-    </div>
-  </div>
+        <div class="hero-cards">
+          <div class="info-card dark-card">
+            <h3>Interactive</h3>
+            <p>Visitors can browse content and play mini games in the same website.</p>
+          </div>
+          <div class="info-card">
+            <h3>Clean Design</h3>
+            <p>Rounded cards, soft shadows, and a bright layout suitable for a personal homepage.</p>
+          </div>
+          <div class="info-card wide-card">
+            <h3>Games Included</h3>
+            <div class="tag-row">
+              <span class="tag">Tic Tac Toe</span>
+              <span class="tag">Number Guess</span>
+              <span class="tag">Reflex Test</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="section">
-    <h2>Contact</h2>
-    <div class="card">
-      <p>Email: your-email@example.com</p>
-      <p>GitHub: <a href="https://github.com/CarinaL234" target="_blank">github.com/CarinaL234</a></p>
-    </div>
-  </div>
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">About</p>
+          <h2>About Me</h2>
+        </div>
+        <div class="card">
+          <p>
+            I am Carina. This is my personal website built with GitHub Pages.
+            You can replace this section with your own introduction, studies,
+            interests, experience, or anything else you want visitors to know.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">Projects</p>
+          <h2>Featured Projects</h2>
+        </div>
+
+        <div class="project-grid">
+          <div class="card project-card">
+            <h3>Project One</h3>
+            <p>
+              Add your first project summary here. You can later link this card
+              to a GitHub repository or a separate page.
+            </p>
+          </div>
+
+          <div class="card project-card">
+            <h3>Project Two</h3>
+            <p>
+              This section is suitable for technical work, school projects, or creative work.
+            </p>
+          </div>
+
+          <div class="card project-card">
+            <h3>Project Three</h3>
+            <p>
+              You can update this part later without changing the overall structure of the website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="games" class="section games-section">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">Games</p>
+          <h2>Game Menu</h2>
+          <p class="section-desc">
+            Click one game below, and it will open directly in this page.
+          </p>
+        </div>
+
+        <div class="game-menu">
+          <button class="game-tab active" data-game="tic">Tic Tac Toe</button>
+          <button class="game-tab" data-game="guess">Number Guess</button>
+          <button class="game-tab" data-game="reflex">Reflex Test</button>
+        </div>
+
+        <div class="game-panels">
+          <div class="game-panel active" id="panel-tic">
+            <div class="card game-card">
+              <div class="game-header">
+                <div>
+                  <h3>Tic Tac Toe</h3>
+                  <p>Two players can play on one screen.</p>
+                </div>
+                <button class="btn small-btn" id="reset-tic">Reset</button>
+              </div>
+
+              <p id="tic-status" class="game-status">Current turn: X</p>
+
+              <div class="tic-board" id="tic-board">
+                <button class="tic-cell" data-index="0"></button>
+                <button class="tic-cell" data-index="1"></button>
+                <button class="tic-cell" data-index="2"></button>
+                <button class="tic-cell" data-index="3"></button>
+                <button class="tic-cell" data-index="4"></button>
+                <button class="tic-cell" data-index="5"></button>
+                <button class="tic-cell" data-index="6"></button>
+                <button class="tic-cell" data-index="7"></button>
+                <button class="tic-cell" data-index="8"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-panel" id="panel-guess">
+            <div class="card game-card">
+              <div class="game-header">
+                <div>
+                  <h3>Number Guess</h3>
+                  <p>Guess a number from 1 to 100.</p>
+                </div>
+                <button class="btn small-btn" id="reset-guess">New Game</button>
+              </div>
+
+              <p id="guess-message" class="game-status">Enter a number and start guessing.</p>
+
+              <div class="guess-controls">
+                <input type="number" id="guess-input" placeholder="Enter a number" min="1" max="100" />
+                <button class="btn btn-primary" id="submit-guess">Submit</button>
+              </div>
+
+              <p class="tries-text">Tries: <span id="guess-tries">0</span></p>
+            </div>
+          </div>
+
+          <div class="game-panel" id="panel-reflex">
+            <div class="card game-card">
+              <div class="game-header">
+                <div>
+                  <h3>Reflex Test</h3>
+                  <p>Wait for the color to change, then click as fast as possible.</p>
+                </div>
+                <button class="btn small-btn" id="start-reflex">Start</button>
+              </div>
+
+              <p id="reflex-message" class="game-status">Press Start, then wait for green.</p>
+
+              <button id="reflex-area" class="reflex-area neutral">
+                Ready
+              </button>
+
+              <p class="tries-text">Result: <span id="reflex-result">No result yet</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <p class="eyebrow light">Contact</p>
+            <h2>Get In Touch</h2>
+            <p>
+              Replace the email below with your real contact information.
+            </p>
+          </div>
+
+          <div class="contact-links">
+            <a class="btn btn-light" href="https://github.com/CarinaL234" target="_blank">GitHub</a>
+            <a class="btn btn-outline-light" href="mailto:your-email@example.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
